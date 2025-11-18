@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CIRIS WORK — Perusahaan</title>
+  <meta name="description" content="Website resmi CIRIS WORK. Solusi profesional untuk kebutuhan Anda." />
+  <style>
+    :root{
+      --bg:#000000; --card:#111111; --accent:#FFD500; --muted:#BBBBBB; --radius:12px;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#FFFFFF; -webkit-font-smoothing:antialiased}
+    .container{max-width:var(--max-width); margin:0 auto; padding:28px}
+    header{background:linear-gradient(90deg, rgba(11,116,222,0.06), rgba(11,116,222,0.02)); position:sticky; top:0; backdrop-filter: blur(4px); z-index:40}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:48px; height:48px; border-radius:10px; background:var(--accent); display:inline-grid; place-items:center; color:white; font-weight:700}
+    nav ul{list-style:none; display:flex; gap:14px; margin:0; padding:0}
+    nav a{color:var(--muted); text-decoration:none; font-weight:600}
+    nav a.cta{background:var(--accent); color:#fff; padding:8px 12px; border-radius:10px}
+
+    .hero{display:grid; grid-template-columns:1fr; gap:20px; align-items:center; padding:42px 0}
+    .hero-grid{display:grid; gap:24px}
+    .title{font-size:28px; line-height:1.05; font-weight:800}
+    .lead{color:var(--muted); font-size:15px}
+    .buttons{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700}
+    .btn.primary{background:var(--accent); color:white}
+    .btn.ghost{border:1px solid rgba(15,23,36,0.06); background:white}
+
+    .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:18px}
+    .card{background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 20px rgba(12,18,28,0.04)}
+    .card h3{margin:0 0 8px}
+    .muted{color:var(--muted)}
+
+    
+
+    section{padding:36px 0}
+    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center}
+    .services{display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:16px}
+
+    .contact-card{padding:20px; border-radius:12px; background:linear-gradient(180deg, #fff, #fbfdff); box-shadow:0 8px 30px rgba(11,116,222,0.04)}
+    form{display:grid; gap:12px}
+    input[type=text], input[type=email], textarea{width:100%; padding:10px 12px; border-radius:8px; border:1px solid #e6eaf0}
+    button[type=submit]{padding:12px 14px; border-radius:10px; border:0; background:var(--accent); color:white; font-weight:700}
+
+    footer{padding:28px 0; color:var(--muted); font-size:14px}
+
+    /* responsive */
+    @media (min-width:900px){
+      .hero{grid-template-columns:1fr 420px}
+      .title{font-size:40px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img class="logo" src="logo.png" alt="CIRIS WORK Logo" style="width:48px; height:48px; border-radius:10px;">
+        <div>
+          <div style="font-weight:800">CIRIS WORK</div>
+          <div style="font-size:12px; color:var(--muted)">Konstruksi & Desain Teknik Sipil</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a class="cta" href="#contact">Hubungi</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="title">Kami membantu <span style="color:var(--accent)">mendesain, menghitung,dan merancanakan bangunan anda</span> seperti rumah kami sendiri.</div>
+        <div class="buttons">
+          <a class="btn primary" href="#contact">Minta Penawaran</a>
+          <a class="btn ghost" href="#services">Lihat Layanan</a>
+        </div>
+
+        <div class="cards" aria-hidden>
+          <div class="card"><h3>Proyek Selesai</h3><p class="muted">5</p></div>
+          <div class="card"><h3>Klien Puas</h3><p class="muted">98% rating</p></div>
+          <div class="card"><h3>Tim Profesional</h3><p class="muted">5</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Hubungi Sales</h3>
+        <p class="muted">Isi formulir atau langsung email ke <strong>sales@perusahaan.com</strong></p>
+        <div style="margin-top:12px; font-size:13px; color:var(--muted)">Jam kerja: Senin-Jumat, 09:00–17:00</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="grid-2">
+        <div>
+          <h2>Tentang CIRIS WORK</h2>
+          <p class="muted">CIRIS WORK berdiri sejak 2025 Kami fokus pada layanan konstruksi dan desain teknik sipil untuk mendukung pembangunan yang berkualitas dan aman. Kami mengutamakan kualitas, transparansi dan hasil yang terukur.</p>
+          <ul>
+            <li>Visi: Menjadi partner terpercaya</li>
+            <li>Misi: Memberi solusi yang efektif dan hemat biaya</li>
+          </ul>
+        </div>
+        <div>
+          <div class="card">
+            <h3>Keunggulan Kami</h3>
+            <ul class="muted">
+              <li>Tim berpengalaman</li>
+              <li>Metodologi terbukti</li>
+              <li>Support & maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Layanan Utama</h2>
+      <div class="services">
+        <div class="card"><h3>Gambar Kerja</h3><p class="muted">Detail Engineering Design.</p></div>
+        <div class="card"><h3>Pemodelan 3D dan Visualisasi </h3><p class="muted">Pemodelan secara tepat berdasarkan Building Information Modeling</p></div>
+        <div class="card"><h3>Rencana Anggaran Biaya</h3><p class="muted">Menghitung kebutuhan biaya pembangunan.</p></div>
+        <div class="card"><h3>Perencanaan</h3><p class="muted">Perancanaan Struktur suatu bangunan.</p></div>
+      </div>
+    </section>
+
+    <section id="team">
+  <h2>Tim Kami</h2>
+  <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); text-align:center;">
+     
+    <div class="card">
+      <img src="fahmi.jpg" alt="Fahmi Idris" style="width:120px; height:120px; object-fit:cover; border-radius:50%; margin-bottom:10px; border:3px solid var(--accent);">
+      <strong>Fahmi Idris</strong>
+      <div class="muted">Founder</div>
+    </div>
+
+    <div class="card">
+      <img src="ferdiana.jpg" alt="Ferdiana Dwi Lestari" style="width:120px; height:120px; object-fit:cover; border-radius:50%; margin-bottom:10px; border:3px solid var(--accent);">
+      <strong>Ferdiana Dwi Lestari</strong>
+      <div class="muted">3D Modeler</div>
+    </div>
+
+    <div class="card">
+      <img src="arya.jpg" alt="Muh. Arya Swardhana" style="width:120px; height:120px; object-fit:cover; border-radius:50%; margin-bottom:10px; border:3px solid var(--accent);">
+      <strong>Muh. Arya Swardhana</strong>
+      <div class="muted">2D Modeler</div>
+    </div>
+
+    <div class="card">
+      <img src="alfa.jpg" alt="Muh. Alfa Samputra" style="width:120px; height:120px; object-fit:cover; border-radius:50%; margin-bottom:10px; border:3px solid(var(--accent));">
+      <strong>Muh. Alfa Samputra</strong>
+      <div class="muted">Struktural Engineer</div>
+    </div>
+
+    <div class="card">
+      <img src="clara.jpg" alt="Clara Aprilia" style="width:120px; height:120px; object-fit:cover; border-radius:50%; margin-bottom:10px; border:3px solid var(--accent);">
+      <strong>Clara Aprilia</strong>
+      <div class="muted">Social Media</div>
+    </div>
+
+    <div class="card">
+      <img src="firdaus.jpg" alt="Firdaus Teguh F. Eldyka" style="width:120px; height:120px; object-fit:cover; border-radius:50%; margin-bottom:10px; border:3px solid var(--accent);">
+      <strong>Firdaus Teguh F. Eldyka</strong>
+      <div class="muted">Layout Designer</div>
+    </div>
+
+  </div>
+</section>
+
+
+    <section id="contact">
+      <h2>Hubungi Kami</h2>
+      <div class="grid-2">
+        <div class="contact-card">
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <label>Nama</label>
+            <input type="text" id="name" required placeholder="Nama lengkap" />
+            <label>Email</label>
+            <input type="email" id="email" required placeholder="email@domain.com" />
+            <label>Pesan</label>
+            <textarea id="message" rows="5" required placeholder="Ceritakan kebutuhan Anda"></textarea>
+            <button type="submit">Kirim Pesan</button>
+          </form>
+          <div id="formResult" style="margin-top:10px; color:var(--muted)"></div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>Alamat</h3>
+            <p class="muted">Jalan Kemundung, Kost Yudhistira</p>
+            <h3>Telepon</h3>
+            <p class="muted">+62 877 6970 2421</p>
+            <h3>Email</h3>
+            <p class="muted">ciriswork@gmail.com</p>
+            <h3>Instagram</h3>
+            <p class="muted">@ciris.work</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:12px; align-items:center; flex-wrap:wrap">
+        <div>© <strong>CIRIS WORK</strong> — 20XX. Semua hak dilindungi.</div>
+        <div class="muted">Dibuat dengan ♥ oleh tim CIRIS WORK</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const result = document.getElementById('formResult');
+
+      if(!name || !email || !message){ result.textContent = 'Mohon isi semua field.'; return }
+      // Simple client-side email send: open mail client. Replace with AJAX to backend when ready.
+      const subject = encodeURIComponent('Permintaan dari website — ' + name);
+      const body = encodeURIComponent('Nama: ' + name + '\nEmail: ' + email + '\n\n' + message);
+      window.location.href = `mailto:info@perusahaan.com?subject=${subject}&body=${body}`;
+      result.textContent = 'Membuka aplikasi email Anda... Jika tidak terjadi apa-apa, silakan hubungi sales@perusahaan.com';
+    }
+  </script>
+</body>
+</html>
+
